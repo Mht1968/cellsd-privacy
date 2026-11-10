@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="CellSD 基站勘测工具隐私政策">
+<title>CellSD 隐私政策</title>
+<style>
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 28px 20px 64px;
+    background: #ffffff;
+    color: #222222;
+    font-family: -apple-system, BlinkMacSystemFont, "HarmonyOS Sans SC", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  .meta {
+    margin: 0 0 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+    color: #888888;
+  }
+
+  h2 {
+    margin: 32px 0 12px;
+    padding-left: 10px;
+    border-left: 3px solid #2f6bff;
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #111111;
+  }
+
+  p {
+    margin: 0 0 14px;
+  }
+
+  ul {
+    margin: 0 0 14px;
+    padding-left: 22px;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0 0 10px;
+  }
+
+  li::before {
+    content: "·";
+    position: absolute;
+    left: -14px;
+    color: #2f6bff;
+    font-weight: 700;
+  }
+
+  .highlight {
+    margin: 0 0 16px;
+    padding: 14px 16px;
+    background: #f4f7fe;
+    border-radius: 10px;
+    color: #33415c;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    font-size: 13px;
+    color: #999999;
+    text-align: center;
+  }
+
+  @media (max-width: 360px) {
+    body { font-size: 15px; padding: 22px 16px 56px; }
+    h1 { font-size: 20px; }
+    h2 { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>CellSD 隐私政策</h1>
+  <p class="meta">更新日期：2026-11-08</p>
+
+  <p>CellSD（以下简称“本应用”）是一款面向通信工程现场的信号检测与基站勘测工具。我们深知个人信息对你的重要性，并会尽力保护你的个人信息安全。本政策说明我们如何收集、使用、存储和保护你的信息。</p>
+
+  <h2>一、我们收集哪些信息</h2>
+  <p><strong>1. 位置信息（仅 GPS 精确位置）</strong></p>
+  <p>用于在地图上显示你的当前位置、记录信号采样轨迹、计算你与目标基站的距离。系统提供的坐标为 WGS-84，在展示与保存前会转换为 GCJ-02（国内地图坐标系）。</p>
+  <p class="highlight">本应用仅请求 GPS 高精度定位（精度门槛 50 米），不采集基于 Wi-Fi、基站或 IP 地址的网络位置信息。</p>
+  <p><strong>2. 基站与网络信息</strong></p>
+  <p>包括 PLMN（运营商网络标识）、PCI、频点（EARFCN / NR-ARFCN）、TAC、网络制式（2G/3G/4G/5G）、信号强度（RSRP）。这些信息来自系统的基站信息接口，用于信号检测与工程勘测。</p>
+  <p><strong>3. 网络时延</strong></p>
+  <p>通过 ping 命令测量，仅用于判断当前网络是地面回传还是卫星回传。</p>
+  <p><strong>4. 应用内日志</strong></p>
+  <p>仅记录运行状态（如采样时间、导出记录），用于本地排查问题。</p>
+
+  <h2>二、我们如何使用这些信息</h2>
+  <p>上述信息仅用于实现本应用的功能：实时显示信号强度、记录与回放轨迹、比对目标专网基站参数、导出测试报告。我们不会将其用于广告推送、用户画像或任何与功能无关的用途。</p>
+
+  <h2>三、信息的存储</h2>
+  <ul>
+    <li>所有数据仅存储在你的设备本地（应用沙箱内的 Preferences / 数据库），不上传到任何服务器；</li>
+    <li>信号采样记录最多保留 500 条，超出后自动淘汰最早的数据；</li>
+    <li>你可以在「历史」页随时一键清空全部采样记录；</li>
+    <li>卸载本应用会同时删除所有本地数据。</li>
+  </ul>
+
+  <h2>四、信息的共享、转让与公开披露</h2>
+  <p>我们不会向任何第三方出售、出租或共享你的个人信息。以下情况除外：</p>
+  <ul>
+    <li>地图底图由系统 Map Kit（以及高德地图 SDK）提供，渲染地图时会产生必要的网络请求（如瓦片请求），其数据处理遵循对应服务商的隐私政策；</li>
+    <li>你主动点击“导出”生成 CSV / 报告文件时，文件写入你的设备或系统下载目录，由你自行决定如何分享；</li>
+    <li>依据法律法规或监管部门的强制性要求。</li>
+  </ul>
+
+  <h2>五、系统权限说明</h2>
+  <ul>
+    <li>位置权限（精确/模糊）：读取经纬度、显示位置与轨迹。拒绝后地图与轨迹功能不可用；</li>
+    <li>电话/网络状态权限：读取基站与信号强度信息。拒绝后无法显示信号数据；</li>
+    <li>网络权限：加载地图底图、执行 ping 探测。</li>
+  </ul>
+  <p>你可以随时在系统「设置 → 应用 → CellSD → 权限」中撤回上述权限。</p>
+
+  <h2>六、你的权利</h2>
+  <ul>
+    <li>查看与导出：可在应用内查看全部采样记录并导出为 CSV；</li>
+    <li>删除：可在「历史」页清空数据，或卸载应用彻底删除；</li>
+    <li>撤回同意：可在「历史」页选择“撤回隐私授权”，撤回后应用会立即停止采集、清空已存数据，并回到首屏隐私弹窗；</li>
+    <li>拒绝：首次启动时点击“不同意”，应用将直接退出，不收集任何信息。</li>
+  </ul>
+
+  <h2>七、未成年人保护</h2>
+  <p>本应用为工程技术工具，不面向未成年人提供服务。</p>
+
+  <h2>八、本政策的更新</h2>
+  <p>若本政策发生实质性变更，我们会在应用启动时重新征求你的同意。</p>
+
+  <h2>九、联系我们</h2>
+  <!-- 如有独立联系邮箱，可在此处补充，例如：邮箱：support@example.com -->
+  <p>如对本政策有任何疑问，可通过应用详情页的开发者联系方式与我们联系。</p>
+
+  <footer>
+    CellSD 基站勘测工具 · 隐私政策<br>
+    更新日期：2026-11-08
+  </footer>
+
+</main>
+</body>
+</html>
